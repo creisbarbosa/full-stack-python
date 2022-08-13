@@ -25,7 +25,7 @@
  - Dependendo das variáveis utilizadas eles possuem exessões que são alternativas caso alguma condição não seja atendida do modo esperado.
     - Uma saída do código para o usuário achar um novo caminho ou para que o sistema não fique travado.
 
-# Operadores lógicos
+# Aula 1 - Operadores lógicos
 
 ## Aritméticos: retornam o resultado de uma operação
 + somar
@@ -122,6 +122,8 @@ if (media > 8) {
     console.log('Aluno Reprovado')
 }
 
+
+# Aula 2 - Loops
 ## Laços de repetição (Loop)
 
 for([expressãoInicial]; [condição]; [incremento])
@@ -163,3 +165,31 @@ for (var i = 0; i < alunos.length; i++ ){
     }
     console.log('Média: ' + media + ' - ' + resultado);
 }
+
+# Aula 3 - Funções
+
+- Evitar repetição de código
+- Realizar camadas dinâmicas de algoritmos
+
+## Exemplo
+
+function averageCalculation( notes ) {
+    let sum = 0;
+    for ( d = 0; d < notes.length; d++) {
+        sum += notes [d];
+    }
+    average = sum / notes.length;
+    return average;
+}
+
+//escopo global
+
+function aproval( average ) {
+		//escopo da função
+    let condition = average >= 7 ? "Aproved" : "Not aproved";
+    return "Average note: " + average + " - Result: " + condition;
+}
+
+//console.log()
+//console.log('Average: ' + averageCalculation([7, 7, 7, 7]))
+console.log(aproval(averageCalculation([7, 6, 8, 10])))
