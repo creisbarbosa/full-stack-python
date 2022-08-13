@@ -35,7 +35,7 @@
 % resto de divisão
 
 ## Comparadores matemáticos: teste lógico, retornam booleano (true/false)
-<  menor que
+<  menor que <br>
 >  maior que
 <= menor ou igual
 >= maior ou igual
@@ -120,4 +120,46 @@ if (media > 8) {
     console.log('Aluno Aprovado')
 } else {
     console.log('Aluno Reprovado')
+}
+
+## Laços de repetição (Loop)
+
+for([expressãoInicial]; [condição]; [incremento])
+
+// fazer a revisão do carro em 10 km
+
+var km;
+var revisão = 3;
+
+for(km = 0; km <= revisão; km++ ){
+    console.log('apenas ' + km + 'kms, então ainda pode rodar')
+}
+
+### Cálcula média de alunos
+
+var alunos = [
+    [6, 7, 8, 6],
+    [6, 7, 4, 7],
+    [8, 6, 7, 8]
+]
+
+var nota = 0;
+for (var i = 0; i < alunos.length; i++ ){
+
+    nota = 0
+    aluno = alunos[i]
+    console.log('Notas do aluno: ' + aluno)
+    
+    for( c = 0; c < aluno.length; c++ ){
+        nota += aluno[c]
+    }
+    
+    media = nota/4;
+    
+    if(media >= 7){
+        resultado = 'aprovado'
+    } else {
+        resultado = 'reprovado'
+    }
+    console.log('Média: ' + media + ' - ' + resultado);
 }
