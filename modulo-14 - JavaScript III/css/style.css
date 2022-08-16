@@ -112,7 +112,7 @@ p {
     color: #284056;
 }
 
-.error {
+input.error {
     border-color: #B3261E;
     background: #F8D7DA;
     color: #932029;

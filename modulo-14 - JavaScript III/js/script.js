@@ -23,7 +23,7 @@ function aproval(notes) {
 document.getElementById('formulary-01').addEventListener('submit', function(event){
 
     event.preventDefault();
-    event.stopPropagation();
+    event.stopPropagation(); 
 
     if(this.getAttribute('class').match(/error/)){
         return false;
