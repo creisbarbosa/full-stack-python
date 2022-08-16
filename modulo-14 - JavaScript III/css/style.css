@@ -1,0 +1,119 @@
+html {
+    background: linear-gradient(90deg, #E6ECF2 40.94%, #FFFFFF 100%);
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+h1 {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: #003362;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    margin-top: 32px;
+    margin-bottom: 32px;    
+}
+
+input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 0px 16px;
+    gap: 16px;
+    width: 264px;
+    height: 32px;
+
+    background: #FFFFFF;
+    color: #00437F;
+
+    border: 2px solid #00437F;
+    border-radius: 2px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 16px;
+    gap: 8px;
+    width: 300px;
+
+    height: 32px;
+
+    background: #00437F;
+
+    border: 2px solid #3877B2;
+    border-radius: 8px;
+
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #CFE2F2;
+    letter-spacing: 0.25px;
+}
+
+button:hover {
+    background: #3877B2;
+}
+
+button:active {
+    background: #003362;
+}
+
+#result, .message {
+
+    padding-bottom: 16px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: #003362;
+}
+
+p {
+    font-size: 12px;
+    font-weight: 400;
+    padding-top: 8px;
+    color: #284056;
+}
+
+.error {
+    border-color: #B3261E;
+    background: #F8D7DA;
+    color: #932029;
+}
