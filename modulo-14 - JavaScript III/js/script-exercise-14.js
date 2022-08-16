@@ -77,37 +77,19 @@ function filedValidation(element){
 function numberFiledValidation(element){
 
     element.addEventListener('focusout', function(event){
-
         event.preventDefault();
+        let zipnumber = this.value.match(/^[\d]5-[\d]3/) ? this.value.replace(/-/, "") : this.value; 
 
-        if(this.value != "" && this.value.match(/[0-9]*/)&& this.value >= 0 && this.value <= 10){
-            document.querySelector('.message').innerHTML =  "";
+        if(zipnumber != "" && zipnumber.match(/[0-9]*/) && zipnumber >= 0 && zipnumber <= 10){
+            document.querySelector('.messagem').innerHTML = "";
             this.classList.remove('error');
             this.parentNode.classList.remove('error');
         } else {
-            document.querySelector('.message').innerHTML =  "Verify data on red fields";
+            document.querySelector('.menssage').innerHTML = "Verify your Zip Code";
             this.classList.add('error');
             this.parentNode.classList.add('error');
             return false;
         }
-    });
-}
-
-function cepValidation(element){
-    element.addEventListener('focusout', function(event){
-            event.preventDefault();
-            let number = this.value.match(/^[\d]5-[\d]3/) ? this.value.replace(/-/, "") : this.value = "";
-
-            if(number != "" && number.match(/[0-9]*/) && number >= 0 && number <= 10){
-                document.querySelector('.message').innerHTML = "";
-                this.classList.remove('error');
-                this.parentNode.classList.remove('error');
-            } else {
-                document.querySelector('.message').innerHTML = "Verify data on red fields";
-                this.classList.add('error');
-                this.parentNode.classList.add('error');
-                return false;
-            }
     });
 }
 
@@ -121,8 +103,4 @@ for(let inFocus of mandatoryField){
 
 for(let inFocus of mandatoryNumberField){
     numberFiledValidation(inFocus);
-}
-
-for(let inFocus of mandatoryCepField){
-    cepValidation(inFocus);
 }
